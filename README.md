@@ -1,13 +1,10 @@
 # backbone-log-stream
 a Backbone plugin to control and centralize logging
 
+My ultimate goal with this plugin is to avoid the use of `console.log` scattered throughout my application,
+and to control this output for production builds / releases.
+
 Compatible with Backbone 1.0.0 and up.
-
-## How it works
-__*What's wrong with browser caching for AJAX responses?*__
-Nothing. This plugin is primarily for working with an API where you don't have control over response cache headers.
-
-Eventually I also want to add support to somehow pre-cache all your external templates.
 
 ## Usage
 Add the script to the page after backbone.js has been included:
@@ -38,18 +35,26 @@ requirejs.config({
 If you are using CommonJS modules, install via `npm`:
 
 ```
-npm install backbone-template-cache
+npm install backbone-log-stream
 ```
 
 then require it in your modules:
 
 ```js
-var templateCache = require('backbone-log-stream');
+require('backbone-log-stream');
 ```
 
 ## API
 
-TODO
+* `Object.log()` - where `Object` is one of `Backbone.Model`, `Backbone.Collection`, `Backbone.Router`, `Backbone.View`.
+
+## Example
+
+There's an example one page app in the `example/` folder, modified from this (original tutorial)[https://tutorialzine.com/2013/04/services-chooser-backbone-js]
+
+* `npm install http-server -g`
+* `http-server .`
+* open your browser to (http://localhost:8080/example)[http://localhost:8080/example]
 
 ## Tests
 You can run the tests by cloning the repo, installing the dependencies and

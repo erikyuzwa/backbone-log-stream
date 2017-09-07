@@ -94,7 +94,7 @@ $(function(){
         var AppView = Backbone.View.extend({
     
             // Base the view on an existing element
-            el: $('#main'),
+            el: $('#root'),
     
             initialize: function() {
 
