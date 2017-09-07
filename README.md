@@ -1,8 +1,8 @@
 # backbone-log-stream
 a Backbone plugin to control and centralize logging
 
-My ultimate goal with this plugin is to avoid the use of `console.log` scattered throughout my application,
-and to control this output for production builds / releases.
+My ultimate goal with this plugin is to avoid the use of `console.log` scattered throughout an application,
+and to control this output for reducing stress during production builds / releases.
 
 Compatible with Backbone 1.0.0 and up.
 
