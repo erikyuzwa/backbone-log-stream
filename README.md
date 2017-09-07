@@ -46,15 +46,23 @@ require('backbone-log-stream');
 
 ## API
 
-* `Object.log()` - where `Object` is one of `Backbone.Model`, `Backbone.Collection`, `Backbone.Router`, `Backbone.View`.
+* `Object.logEnabled(true | false)` - this is available from any `Backbone.Model`, `Backbone.Collection`, `Backbone.Router` or `Backbone.View` object. A global toggle to 
+either allow or suppress log output. **NB: this will affect ALL logging using this plugin**.
+
+* `Object.log(args)` - where `Object` is one of `Backbone.Model`, `Backbone.Collection`, `Backbone.Router`, `Backbone.View`.
+eg
+```
+  // within a Backbone.* object
+  this.log('thx1138');
+```
 
 ## Example
 
-There's an example one page app in the `example/` folder, modified from this (original tutorial)[https://tutorialzine.com/2013/04/services-chooser-backbone-js]
+There's an example one page app in the `example/` folder, modified from this [original tutorial](https://tutorialzine.com/2013/04/services-chooser-backbone-js)
 
 * `npm install http-server -g`
 * `http-server .`
-* open your browser to (http://localhost:8080/example)[http://localhost:8080/example]
+* open your browser to [http://localhost:8080/example](http://localhost:8080/example)
 
 ## Tests
 You can run the tests by cloning the repo, installing the dependencies and
